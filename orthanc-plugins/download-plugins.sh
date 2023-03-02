@@ -19,6 +19,8 @@ VERSION_WEB_VIEWER=mainline
 VERSION_WSI=mainline
 VERSION_STONE_WEB_VIEWER=mainline
 VERSION_STONE_RT_SAMPLE=mainline
+# ORTHANCEXPLORER2
+VERSION_OE2=mainline
 
 # Download binaries compiled with Linux Standard Base
 
@@ -65,6 +67,9 @@ wget ${URL}/plugin-neuro/${VERSION_NEURO}/UnitTests -O - > UnitTests-Neuro
 
 wget ${URL}/stone-webviewer/${VERSION_STONE_WEB_VIEWER}/libStoneWebViewer.so
 wget ${URL}/stone-rt-sample/${VERSION_STONE_RT_SAMPLE}/libRtViewerPlugin.so
+
+# ORTHANCEXPLORER2
+wget ${URL}/plugin-orthanc-explorer-2/${VERSION_OE2}/libOrthancExplorer2.so
 
 chmod +x ./OrthancWSIDicomToTiff
 chmod +x ./OrthancWSIDicomizer
@@ -121,3 +126,5 @@ mv ./libOrthancIndexer.so              /usr/local/share/orthanc/plugins/
 mv ./libOrthancNeuro.so                /usr/local/share/orthanc/plugins/
 mv ./libStoneWebViewer.so              /usr/local/share/orthanc/plugins/
 mv ./libRtViewerPlugin.so              /usr/local/share/orthanc/plugins/
+# ORTHANCEXPLORER2
+mv ./libOrthancExplorer2.so            /usr/local/share/orthanc/plugins/
